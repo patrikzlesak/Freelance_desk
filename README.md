@@ -1,6 +1,6 @@
 # FREELANCE DESK
 
-Konzolová aplikace v jazyce **C# – jednoduchý informační systém pro evidenci
+Konzolová aplikace v jazyce **C#** – jednoduchý informační systém pro evidenci
 **klientů, zakázek a faktur** freelancera. Data se ukládají do souborů,
 takže zůstávají zachována mezi jednotlivými spuštěními.
 
