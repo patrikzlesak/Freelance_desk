@@ -9,12 +9,11 @@ namespace zaverecny_projekt
         public string name { get; set; }
         public string address { get; set; }
         public string ICO { get; set; }
-        public Client() { }
-        public Client(string jmeno, string adresa, string ico)
+        public Client(string name, string address, string ICO)
         {
-            name = jmeno;
-            address = adresa;
-            ICO = ico;
+            this.name = name;
+            this.address = address;
+            this.ICO = ICO;
         }
 
     }

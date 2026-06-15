@@ -10,13 +10,12 @@ namespace zaverecny_projekt
         public Project project { get; set; }
         public decimal amount { get; set; }
         public bool is_paid { get; set; }
-        public Invoice() { }
-        public Invoice(Client klient, Project projekt, decimal castka, bool zaplaceno) {
+        public Invoice(Client client, Project project, decimal amount, bool is_paid) {
 
-            client = klient;
-            project = projekt;
-            amount = castka;
-            is_paid = zaplaceno;
+            this.client = client;
+            this.project = project;
+            this.amount = amount;
+            this.is_paid = is_paid;
         }
     }
 }

@@ -932,12 +932,13 @@ namespace zaverecny_projekt
                             Console.WriteLine("VAŠE FAKTURAČNÍ STATISTIKY");
                             Console.WriteLine();
                             Console.WriteLine($"Celkem vystavených faktur: {invoice_num}");
-                            Console.WriteLine($"Celková hodnota faktur: {total}");
+                            Console.Write($"Celková hodnota faktur: {total} Kč");
+                            Console.WriteLine();
                             Console.Write("Celkem zaplacených faktur: ");
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.Write(paid_amount);
+                            Console.WriteLine(paid_amount);
                             Console.ResetColor();
-                            Console.WriteLine("Celková hodnota zaplacených faktur: ");
+                            Console.Write("Celková hodnota zaplacených faktur: ");
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine($"{paid_amount} Kč");
                             Console.ResetColor();
@@ -947,8 +948,10 @@ namespace zaverecny_projekt
                             Console.ResetColor();
                             Console.Write("Celková hodnota nezaplacených faktur: ");
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.Write($"{unpaid_amount} Kč");
+                            Console.WriteLine($"{unpaid_amount} Kč");
                             Console.ResetColor();
+                            Console.WriteLine();
+                            Console.WriteLine("-- Stiskněte libovolnou klávesu pro návrat do menu");
                             Console.ReadKey();
                             break;
                         }
@@ -1013,7 +1016,7 @@ namespace zaverecny_projekt
                 if (!int.TryParse(vstup, out num))
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Chyba: Musíte zadat pouze čísla.");
+                    Console.WriteLine("Chyba: Musíte zadat pouze čísla (8).");
                     Console.Write("Zkuste to znovu: ");
                     Console.ResetColor();
                     continue;
@@ -1021,7 +1024,7 @@ namespace zaverecny_projekt
                 if (vstup.Length < min)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"Chyba: Zadali jste málo číslic (minimum je {min}).");
+                    Console.WriteLine($"Chyba: Zadali jste málo číslic. Požadovaný počet je {min}.");
                     Console.Write("Zkuste to znovu: ");
                     Console.ResetColor();
                     continue;
@@ -1029,7 +1032,7 @@ namespace zaverecny_projekt
                 if (vstup.Length > max)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"Chyba: Zadali jste moc číslic (maximum je {max}).");
+                    Console.WriteLine($"Chyba: Zadali jste moc číslic. Požadovaný počet je {min}.");
                     Console.Write("Zkuste to znovu: ");
                     Console.ResetColor();
                     continue;

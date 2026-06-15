@@ -10,13 +10,12 @@ namespace zaverecny_projekt
         public Client client { get; set; }
         public decimal hourly_rate { get; set; }
         public double hours_worked { get; set; }
-        public Project(){ }
-        public Project(string typ, Client klient, decimal sazba, double odpracovane_hodiny)
+        public Project(string order_type, Client client, decimal hourly_rate, double hours_worked)
         {
-            order_type = typ;
-            client = klient;
-            hourly_rate = sazba;
-            hours_worked = odpracovane_hodiny;
+            this.order_type = order_type;
+            this.client = client;
+            this.hourly_rate = hourly_rate;
+            this.hours_worked = hours_worked;
         }
         public decimal GetTotalPrice()
         {
